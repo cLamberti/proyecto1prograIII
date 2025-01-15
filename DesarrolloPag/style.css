@@ -1,0 +1,104 @@
+body{
+  background-color: rgb(35, 35, 37);
+  height: 90vh;
+}
+
+body *{
+  color: whitesmoke;
+  font-size: x-large;
+}
+
+main{
+  height: 600px;
+  display: grid;
+
+  grid-template-columns: 1fr 35%;
+  grid-template-rows: 5% 1fr 15%;
+
+  grid-template-areas: 
+    "header header"
+    "content aside"
+    "footer footer";
+
+  gap: 24px;
+}
+
+.header{
+  grid-area: header;
+  background-color: rgb(58, 58, 57);
+  border-radius: 8px;
+}
+
+.content{
+  grid-area: content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  gap: 16px;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* border: 2px solid whitesmoke; */
+  border-radius: 8px;
+  padding: 3%;
+
+  /* img */
+  background-image: url(https://img.freepik.com/premium-photo/low-poly-dark-image-high-mountains-ultraviolet-illumination-3d-illustration_75780-2007.jpg?semt=ais_hybrid);
+  background-size: cover;
+}
+
+.footer{
+  grid-area: footer;
+  background-color: rgb(67, 67, 66);
+  border-radius: 8px;
+}
+
+.aside{
+  grid-area: aside;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 3%;
+  border-radius: 8px;
+
+  background-image: url(https://t3.ftcdn.net/jpg/05/12/68/88/360_F_512688865_9OocSgl7HOU9PFPw1h8QbcpEq52qMZMi.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+input{
+  color: black;
+  border-radius: 32px;
+  border: 0px;
+  padding: 2%;
+}
+
+button{
+  width: 95%;
+  border-radius: 64px;
+  color: white;
+  background-color: rgb(181 22 102);
+  border: 0px;
+  box-shadow: rgba(214, 36, 176, 0.35) 0px 5px 15px;
+}
+
+.ad{
+  grid-area: ad;
+}
+
+a:hover{
+ color: black;
+}
+
+button:disabled{
+  background-color: rgba(193, 190, 192, 0.35);
+  box-shadow: rgba(27, 25, 26, 0.35) 0px 5px 15px;
+  color: rgb(158, 153, 153);
+}
