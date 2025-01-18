@@ -1,104 +1,131 @@
-body{
-  background-color: rgb(35, 35, 37);
-  height: 90vh;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color:rgba(0, 0, 0, 0.1);
 }
 
-body *{
-  color: whitesmoke;
-  font-size: x-large;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fffcf1;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-main{
-  height: 600px;
-  display: grid;
-
-  grid-template-columns: 1fr 35%;
-  grid-template-rows: 5% 1fr 15%;
-
-  grid-template-areas: 
-    "header header"
-    "content aside"
-    "footer footer";
-
-  gap: 24px;
+.logo {
+    height: 50px;
+    color: #353030;
 }
 
-.header{
-  grid-area: header;
-  background-color: rgb(58, 58, 57);
-  border-radius: 8px;
+nav {
+    display: flex;
+    gap: 1rem;
 }
 
-.content{
-  grid-area: content;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-
-  gap: 16px;
+nav a {
+    text-decoration: none;
+    color: #fffcf1;
+    font-size: 1rem;
+    transition: color 0.3s;
 }
 
-.card{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  /* border: 2px solid whitesmoke; */
-  border-radius: 8px;
-  padding: 3%;
-
-  /* img */
-  background-image: url(https://img.freepik.com/premium-photo/low-poly-dark-image-high-mountains-ultraviolet-illumination-3d-illustration_75780-2007.jpg?semt=ais_hybrid);
-  background-size: cover;
+nav a:hover {
+    color: #fffcf1;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #f4f4f4;
+    overflow: hidden;
 }
 
-.footer{
-  grid-area: footer;
-  background-color: rgb(67, 67, 66);
-  border-radius: 8px;
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
 
-.aside{
-  grid-area: aside;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding-block: 3%;
-  border-radius: 8px;
-
-  background-image: url(https://t3.ftcdn.net/jpg/05/12/68/88/360_F_512688865_9OocSgl7HOU9PFPw1h8QbcpEq52qMZMi.jpg);
-  background-size: cover;
-  background-position: center;
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding: 2rem;
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
 }
 
-input{
-  color: black;
-  border-radius: 32px;
-  border: 0px;
-  padding: 2%;
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-button{
-  width: 95%;
-  border-radius: 64px;
-  color: white;
-  background-color: rgb(181 22 102);
-  border: 0px;
-  box-shadow: rgba(214, 36, 176, 0.35) 0px 5px 15px;
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
-.ad{
-  grid-area: ad;
+.paquetes {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
-a:hover{
- color: black;
+.paquete-card {
+    background: white;
+    color: black;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-button:disabled{
-  background-color: rgba(193, 190, 192, 0.35);
-  box-shadow: rgba(27, 25, 26, 0.35) 0px 5px 15px;
-  color: rgb(158, 153, 153);
+.paquete-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.paquete-card h3 {
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.search-bar {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.search-bar input,
+.search-bar button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #e69500;
 }
