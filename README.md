@@ -8,4 +8,4 @@ PROYECTO:
 - uso de 3 secciones como minimo
 - defender el proyecto
 
-  FECHA DE ENTREGA:
+  FECHA DE ENTREGA: 30 de enero
