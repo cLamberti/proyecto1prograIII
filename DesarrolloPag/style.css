@@ -129,3 +129,105 @@ nav a:hover {
 .search-bar button:hover {
     background-color: #e69500;
 }
+
+/* Comentarios */
+
+#comentarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.comentarios-heading{
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comentarios-heading h1{
+    font-size: 2.2rem;
+    font-weight: 500;
+    background-color: #353030;
+    color: #089ba5;
+    padding: 10px 20px;
+}
+
+.comentarios-heading span{
+    font-size: 1.3rem;
+    color: #353030;
+    margin-bottom: 10px;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+}
+
+.comentarios-box-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px;
+    width: 100%;
+}
+
+.comentarios-box {
+    flex: 1 1 calc(20% - 10px);
+    max-width: calc(20% - 10px);
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.7);
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 0; 
+    border-radius: 8px; 
+    text-align: left;
+}
+
+.profile-img img {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover;
+    object-position: center;
+}
+
+.box-top {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    margin-bottom: 10px;
+}
+
+.name-user {
+    text-align: left;
+}
+.name-user strong {
+    color: #353030;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.name-user span {
+    color: #089ba5;
+    font-size: 0.8rem;
+}
+
+.reviews {
+    margin-top: 10px;
+    color: #f9d71c; 
+    font-size: 0.5rem; 
+}
+
+.comentarios-cliente {
+    font-size: 0.5rem;
+    color: #353030;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.comentarios-box:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
