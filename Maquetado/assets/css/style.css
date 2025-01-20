@@ -7,7 +7,7 @@ body {
   
   main {
     width: 99%;
-    height: 100%;
+    height: auto;
     margin: 0 auto;
     display: grid;
     gap: 1rem;
@@ -30,6 +30,11 @@ body {
     text-align: center;
   }
 
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
   .hero{
     min-height: 40vh;
     width: 80%;
