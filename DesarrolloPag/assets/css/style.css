@@ -240,6 +240,7 @@ section.comments {
   gap: 1rem;
   justify-content: center;
   padding: 6rem;
+  box-sizing: border-box;
 }
 
 .reviews-header {
