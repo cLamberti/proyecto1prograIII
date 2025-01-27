@@ -15,14 +15,14 @@
             <img class="logo" src="assets\logo.png" alt="Logo">
             <nav>
                 <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
-                <a href="#">Login</a>
+                <a href="#description">About Us</a>
+                <a href="#packages">Services</a>
+                <a href="#footer">Contact</a>
+                <a href="login.html">Login</a>
             </nav>
         </header>
 
-        <section class="hero">
+        <section class="hero" id="hero">
             <div class="hero-content">
                 <div class="hero-background"></div>
                 <div class="hero-text">
@@ -32,25 +32,25 @@
                 </div>
         </section>
 
-        <section class="packages">
-            <div class="package-card">
+        <section class="packages" id="packages">
+            <div class="package-card" id="economic-package-card">
                 <img src="https://i.pinimg.com/736x/2a/46/82/2a46822a3bd4367b95a38125675020a8.jpg"
                     alt="Paquete Economico">
                 <h3>Paquete Económico: Escapada Rápida a la Costa</h3>
             </div>
-            <div class="package-card">
+            <div class="package-card" id="regular-package-card">
                 <img src="https://i.pinimg.com/236x/5b/46/c7/5b46c7c0a85d06f19f8035ba63064266.jpg"
                     alt="Paquete Regular">
                 <h3>Paquete Regular: Aventura Costera Esencial</h3>
             </div>
-            <div class="package-card">
+            <div class="package-card" id="premium-package-card">
                 <img src="https://i.pinimg.com/236x/a7/9f/c5/a79fc5435e477ae5db54e19ce2fc8c13.jpg"
                     alt="Paquete Premiun">
                 <h3>Paquete Premium: Aventura Élite en la Costa</h3>
             </div>
         </section>
 
-        <section class="description">
+        <section class="description" id="description">
             <h2>Descripción</h2>
             <p>Nos complace presentarte Coastal Riders, tu mejor opción para
                 vivir aventuras inolvidables en la costa.
@@ -63,8 +63,8 @@
                 excepcional.</p>
         </section>
 
-        <section class="package-description">
-            <div class="package-description-card">
+        <section class="package-description" id="package-description">
+            <div class="package-description-card" id="economic-package">
                 <h3>Paquete Económico: Escapada Rápida a la Costa</h3>
                 <p>Duración: 4 horas <br>
                     Incluye: <br>
@@ -76,7 +76,7 @@
                     Viajeros que quieren disfrutar de una experiencia rápida y auténtica en Playa Tamarindo,
                     aprovechando el tiempo al máximo.</p>
             </div>
-            <div class="package-description-card">
+            <div class="package-description-card" id="regular-package">
                 <h3>Paquete Regular: Aventura Costera Esencial</h3>
                 <p>Duración: 6 horas <br>
                     <Incluye:br></Incluye:br>
@@ -90,7 +90,7 @@
                     accesible.
                 </p>
             </div>
-            <div class="package-description-card">
+            <div class="package-description-card" id="premium-package">
                 <h3>Paquete Premium: Aventura Élite en la Costa</h3>
                 <p>Duración: 10 horas <br>
                     Incluye: <br>
@@ -108,11 +108,11 @@
             </div>
         </section>
 
-        <section class="gallery">
+        <section class="gallery" id="gallery">
             <h3>Galería</h3>
         </section>
 
-        <section class="comments">
+        <section class="comments" id="comments">
             <div class="reviews-header">
                 <h1>Calificaciones de clientes</h1>
             </div>
@@ -218,7 +218,7 @@
 
         </section>
 
-        <footer>
+        <footer class="footer" id="footer">
             <div class="footer-container">
                 <!-- Información de contacto -->
                 <div class="footer-section">
@@ -262,6 +262,8 @@
             </div>
         </footer>
     </main>
+    <button id="scrollTopButton" title="Volver al principio">↑</button>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
