@@ -56,3 +56,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     });
+
+
+//Gallery
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
+const prevButton = document.querySelector('.carousel-btn.prev');
+const nextButton = document.querySelector('.carousel-btn.next');
+
+const slideWidth = slides[0].getBoundingClientRect().width;
+
+// Alinear las imágenes una al lado de la otra
+slides.forEach((slide, index) => {
+  slide.style.left = slideWidth * index + 'px';
+});
+
+const moveToSlide = (track, currentSlide, targetSlide) => {
+  track.style.transform = `translateX(-${targetSlide.style.left})`;
+};
+
+prevButton.addEventListener('click', () => {
+  const currentSlide = track.querySelector('.current-slide') || slides[0];
+  const prevSlide = currentSlide.previousElementSibling || slides[slides.length - 1];
+
+  currentSlide.classList.remove('current-slide');
+  prevSlide.classList.add('current-slide');
+
+  moveToSlide(track, currentSlide, prevSlide);
+});
+
+nextButton.addEventListener('click', () => {
+  const currentSlide = track.querySelector('.current-slide') || slides[0];
+  const nextSlide = currentSlide.nextElementSibling || slides[0];
+
+  currentSlide.classList.remove('current-slide');
+  nextSlide.classList.add('current-slide');
+
+  moveToSlide(track, currentSlide, nextSlide);
+});
