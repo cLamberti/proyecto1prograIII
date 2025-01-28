@@ -153,7 +153,7 @@ nav a:hover {
 }
 
 .packages {
-  background-color: #e4cf84;
+  background-color: #dfc8a2;
   padding: 2rem 1rem;
   display: flex;
   gap: 2rem;
@@ -165,7 +165,7 @@ nav a:hover {
 /* Paquetes */
 .package-card {
   padding: 1.5rem;
-  background: white;
+  background: #ebdcc4;
   color: #353030;
   border-radius: 1rem;
   flex: 1 1 calc(33.333% - 2rem);
@@ -223,7 +223,7 @@ nav a:hover {
 /* Descripción */
 .description {
   min-height: 0vh;
-  background-color: #e4cf84;
+  background-color: #dfc8a2;
   text-align: center;
   padding: 1cm;
 }
@@ -232,7 +232,7 @@ nav a:hover {
   padding: 1cm;
   border: #FFFCF1;
   border-radius: 3cm;
-  background: white;
+  background: #ebdcc4;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -249,7 +249,7 @@ nav a:hover {
 }
 
 .package-description-card {
-  background-color: #e4cf84;
+  background-color: #dfc8a2;
   width: 100%;
   min-height: 30%;
   text-align: center;
@@ -258,7 +258,7 @@ nav a:hover {
   padding: 0.2cm;
   border: #FFFCF1;
   border-radius: 3cm;
-  background: white;
+  background: #ebdcc4;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   width: 70%;
   margin: auto;
@@ -267,7 +267,7 @@ nav a:hover {
   padding: 0.1cm;
   border: #FFFCF1;
   border-radius: 3cm;
-  background: white;
+  background: #ebdcc4;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   width: 70%;
   margin: auto;
@@ -277,7 +277,7 @@ nav a:hover {
   padding: 0.1cm;
   border: #FFFCF1;
   border-radius: 3cm;
-  background: white;
+  background: #ebdcc4;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   width: 70%;
   margin: auto;
@@ -287,7 +287,7 @@ nav a:hover {
 
 .gallery {
   min-height: 40vh;
-  background-color: #fffcf1;
+  background-color: #dfc8a2;
 }
 
 
@@ -300,7 +300,7 @@ section.comments {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  background-color: #e4cf84;
+  background-color: #dfc8a2;
   gap: 1rem;
 }
 
@@ -325,7 +325,7 @@ section.comments {
   padding: 0,7cm;
   border: #FFFCF1;
   border-radius: 3cm;
-  background: white;
+  background: #ebdcc4;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   width: 20%;
 }
@@ -344,7 +344,7 @@ section.comments {
 .review-box {
   flex: 1 1 calc(20% - 10px);
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.7);
-  background-color: #f4f4f4;
+  background-color: #ebdcc4;
   padding: 20px;
   margin: 0;
   border-radius: 8px;
