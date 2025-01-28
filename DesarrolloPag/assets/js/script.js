@@ -3,7 +3,9 @@ const scrollTopButton = document.getElementById('scrollTopButton');
 const economicPackageCard = document.getElementById('economic-package-card');
 const regularPackageCard = document.getElementById('regular-package-card');
 const premiumPackageCard = document.getElementById('premium-package-card');
-
+const menu = document.querySelector("#menu");
+const btnOpenMenu = document.querySelector("#btnOpenMenu");
+const btnCloseMenu = document.querySelector("#btnCloseMenu");
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,7 +24,17 @@ document.addEventListener('DOMContentLoaded', () => {
           behavior: 'smooth'
         });
       });
-      
+
+
+      //Menú
+      btnOpenMenu.addEventListener("click", () =>{
+        menu.classList.add("visible")
+      })
+
+      btnCloseMenu.addEventListener("click", () =>{
+        menu.classList.remove("visible")
+      })
+
       economicPackageCard.addEventListener('click', () => {
         const target = document.getElementById('economic-package');
         const offset = -100; 

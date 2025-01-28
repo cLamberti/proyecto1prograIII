@@ -12,22 +12,33 @@
 <body>
     <main>
         <header>
-            <img class="logo" src="assets\logo.png" alt="Logo">
-            <nav>
-                <a href="#">Home</a>
-                <a href="#description">About Us</a>
-                <a href="#packages">Services</a>
-                <a href="#footer">Contact</a>
-                <a href="login.html">Login</a>
+            <img class="logo" src="assets/logo.png" alt="Logo">
+
+            <button class="open-menu" id="btnOpenMenu">    
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="menu" id="menu">
+                <button class="close-menu" id="btnCloseMenu">x</button>
+                <ul class="menu-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#description">About Us</a></li>
+                    <li><a href="#packages">Services</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
             </nav>
         </header>
+        
+        
+        
 
         <section class="hero" id="hero">
             <div class="hero-content">
                 <div class="hero-background"></div>
                 <div class="hero-text">
                     <h1>¡Bienvenido a Coastall Riders!</h1>
-                    <p>Somos Coastal Riders<br>Tu aventura costera comienza aquí.</p>
+                    <p>Somos Coastall Riders<br>Tu aventura costera comienza aquí.</p>
                     <button id="btnHero">Reserva tu aventura ahora</button>
                 </div>
         </section>
