@@ -105,11 +105,13 @@ header {
     padding: 2rem;
     background-color: #FFFCF1;
     box-sizing: border-box;
+
   }
 
   .menu.visible{
     opacity: 1;
     visibility: visible;
+    border-end-start-radius: 8px;
   }
 
   .menu-list{
@@ -516,18 +518,26 @@ nav a:hover {
 
 @media (max-width: 768px) {
   .carousel-slide {
-    flex: 0 0 100%;
-    max-width: 300px;
+    flex: 0 0 90%; /* Ocupa más espacio horizontal */
+    max-width: 280px; /* Tamaño reducido para dispositivos medianos */
+    height: 200px; /* Menos altura */
   }
 
   .carousel-btn {
-    padding: 0.4rem;
+    padding: 0.3rem 0.5rem; /* Botones más pequeños */
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .carousel-slide {
-    max-width: 250px;
+    max-width: 220px; /* Tamaño más compacto */
+    height: 180px; /* Menor altura para móviles pequeños */
+  }
+
+  .carousel-btn {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem; /* Botones aún más pequeños */
   }
 }
 
