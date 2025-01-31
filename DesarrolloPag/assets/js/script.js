@@ -76,7 +76,7 @@ const slides = Array.from(track.children);
 const prevButton = document.querySelector('.carousel-btn.prev');
 const nextButton = document.querySelector('.carousel-btn.next');
 
-const slideWidth = slides[0].getBoundingClientRect().width;
+const slideWidth = slides[0].getBoundingClientRect().width; 
 
 // Alinear las imágenes una al lado de la otra
 slides.forEach((slide, index) => {
