@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-02-2025 a las 03:36:56
+-- Tiempo de generación: 02-02-2025 a las 03:56:14
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -58,6 +58,21 @@ CREATE TABLE `economic_package` (
   `id` int(11) NOT NULL,
   `image` mediumblob NOT NULL,
   `title` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `feedbacks`
+--
+
+CREATE TABLE `feedbacks` (
+  `id` int(11) NOT NULL,
+  `profile-image` mediumblob NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `social` varchar(100) NOT NULL,
+  `stars` int(11) NOT NULL,
+  `customer_comment` mediumtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -196,6 +211,12 @@ ALTER TABLE `economic_package`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `economicPackage_unique_1` (`title`),
   ADD UNIQUE KEY `economicPackage_unique` (`image`) USING HASH;
+
+--
+-- Indices de la tabla `feedbacks`
+--
+ALTER TABLE `feedbacks`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `footer`
