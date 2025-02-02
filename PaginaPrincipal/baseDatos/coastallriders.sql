@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-02-2025 a las 03:31:37
+-- Tiempo de generación: 02-02-2025 a las 03:36:56
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -69,8 +69,8 @@ CREATE TABLE `economic_package` (
 CREATE TABLE `footer` (
   `id` int(11) NOT NULL,
   `direccion` varchar(100) NOT NULL,
-  `telefono` varchar(100) NOT NULL,
   `correo` varchar(100) NOT NULL,
+  `telefono` varchar(100) NOT NULL,
   `horarioAtencion` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -201,11 +201,7 @@ ALTER TABLE `economic_package`
 -- Indices de la tabla `footer`
 --
 ALTER TABLE `footer`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `footer_unique` (`direccion`),
-  ADD UNIQUE KEY `footer_unique_1` (`telefono`),
-  ADD UNIQUE KEY `footer_unique_2` (`correo`),
-  ADD UNIQUE KEY `footer_unique_3` (`horarioAtencion`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `header`
