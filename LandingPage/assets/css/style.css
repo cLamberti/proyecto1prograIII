@@ -236,7 +236,6 @@ nav a:hover {
 
 @media screen and (max-width: 550px) {
  .hero{
-  width: 95%;
   height: 50vh;
  }
 
