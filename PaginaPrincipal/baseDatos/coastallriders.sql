@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-02-2025 a las 01:03:24
+-- Tiempo de generación: 05-02-2025 a las 02:34:28
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -32,7 +32,7 @@ CREATE TABLE `feedbacks` (
   `image_url` varchar(100) NOT NULL,
   `customer_name` varchar(20) NOT NULL,
   `social_media` varchar(30) NOT NULL,
-  `customer_comment` varchar(150) NOT NULL
+  `customer_comment` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -40,9 +40,9 @@ CREATE TABLE `feedbacks` (
 --
 
 INSERT INTO `feedbacks` (`id`, `image_url`, `customer_name`, `social_media`, `customer_comment`) VALUES
-(1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPiFrwekd2lvtAPg_pEk4bdSiEZ_BA4xe82g&s', 'Valeria Ramírez', '@valeramirezweb', '¡El servicio de Coastall Riders fue excelente. Los vehículos estaban en perfectas condiciones, limpios y muy cómodos para nuestro viaje a las zonas co'),
-(2, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE6-KsNGUoKgyIAATW1CNPeVSHhZzS_FN0Zg&s', 'Javier Morales', '@javiermoralsweb', '¡El vehículo que alquilamos con Coastall Riders fue funcional y cumplió con su propósito, pero tuvimos algunos problemas con el motor durante el recor'),
-(3, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPiFrwekd2lvtAPg_pEk4bdSiEZ_BA4xe82g&s', 'Sofía López', '@sofilopeweb', '¡La experiencia con Coastall Riders no fue la mejor. El vehículo no estaba tan limpio como esperaba y tuvimos un retraso en la entrega, lo que afectó ');
+(1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPiFrwekd2lvtAPg_pEk4bdSiEZ_BA4xe82g&s', 'Valeria Ramírez', '@valeramirezweb', '¡El servicio de Coastall Riders fue excelente. Los vehículos estaban en perfectas condiciones, limpios y muy cómodos para nuestro viaje a las zonas costeras. Además, el proceso de alquiler fue rápido y sencillo, y el personal fue muy amable. Definitivamente los recomendaría y volveré a contratarlos para futuros tours.!'),
+(2, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE6-KsNGUoKgyIAATW1CNPeVSHhZzS_FN0Zg&s', 'Javier Morales', '@javiermoralsweb', '¡El vehículo que alquilamos con Coastall Riders fue funcional y cumplió con su propósito, pero tuvimos algunos problemas con el motor durante el recorrido. Sin embargo, apreciamos mucho la atención del equipo, que respondió rápidamente a nuestras consultas. Espero que mejoren esos detalles porque el servicio en general fue muy bueno.!'),
+(3, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCpuCO7aXdTy1dAvKDdLjjSH8UGnM1O3BHXg&s', 'Sofía López', '@sofilopeweb', '¡La experiencia con Coastall Riders no fue la mejor. El vehículo no estaba tan limpio como esperaba y tuvimos un retraso en la entrega, lo que afectó nuestro itinerario. Aunque el personal intentó resolver la situación, considero que hay aspectos que necesitan mejorar para ofrecer un servicio más profesional!');
 
 -- --------------------------------------------------------
 
