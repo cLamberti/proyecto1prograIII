@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-02-2025 a las 03:56:14
+-- Tiempo de generación: 05-02-2025 a las 01:03:24
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -24,81 +24,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `company_description`
---
-
-CREATE TABLE `company_description` (
-  `id` int(11) NOT NULL,
-  `title` varchar(100) NOT NULL,
-  `description` mediumtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `economic_description`
---
-
-CREATE TABLE `economic_description` (
-  `id` int(11) NOT NULL,
-  `title` varchar(100) NOT NULL,
-  `duracion` varchar(100) NOT NULL,
-  `incluye` varchar(100) NOT NULL,
-  `1description` varchar(100) NOT NULL,
-  `2description` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `economic_package`
---
-
-CREATE TABLE `economic_package` (
-  `id` int(11) NOT NULL,
-  `image` mediumblob NOT NULL,
-  `title` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `feedbacks`
 --
 
 CREATE TABLE `feedbacks` (
   `id` int(11) NOT NULL,
-  `profile-image` mediumblob NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `social` varchar(100) NOT NULL,
-  `stars` int(11) NOT NULL,
-  `customer_comment` mediumtext NOT NULL
+  `image_url` varchar(100) NOT NULL,
+  `customer_name` varchar(20) NOT NULL,
+  `social_media` varchar(30) NOT NULL,
+  `customer_comment` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `footer`
+-- Volcado de datos para la tabla `feedbacks`
 --
 
-CREATE TABLE `footer` (
-  `id` int(11) NOT NULL,
-  `direccion` varchar(100) NOT NULL,
-  `correo` varchar(100) NOT NULL,
-  `telefono` varchar(100) NOT NULL,
-  `horarioAtencion` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `header`
---
-
-CREATE TABLE `header` (
-  `id` int(11) NOT NULL,
-  `logo` mediumblob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `feedbacks` (`id`, `image_url`, `customer_name`, `social_media`, `customer_comment`) VALUES
+(1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPiFrwekd2lvtAPg_pEk4bdSiEZ_BA4xe82g&s', 'Valeria Ramírez', '@valeramirezweb', '¡El servicio de Coastall Riders fue excelente. Los vehículos estaban en perfectas condiciones, limpios y muy cómodos para nuestro viaje a las zonas co'),
+(2, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE6-KsNGUoKgyIAATW1CNPeVSHhZzS_FN0Zg&s', 'Javier Morales', '@javiermoralsweb', '¡El vehículo que alquilamos con Coastall Riders fue funcional y cumplió con su propósito, pero tuvimos algunos problemas con el motor durante el recor'),
+(3, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPiFrwekd2lvtAPg_pEk4bdSiEZ_BA4xe82g&s', 'Sofía López', '@sofilopeweb', '¡La experiencia con Coastall Riders no fue la mejor. El vehículo no estaba tan limpio como esperaba y tuvimos un retraso en la entrega, lo que afectó ');
 
 -- --------------------------------------------------------
 
@@ -113,123 +57,22 @@ CREATE TABLE `hero` (
   `heroButtonText` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `premium_description`
+-- Volcado de datos para la tabla `hero`
 --
 
-CREATE TABLE `premium_description` (
-  `id` int(11) NOT NULL,
-  `title` varchar(100) NOT NULL,
-  `duracion` varchar(100) NOT NULL,
-  `incluye` varchar(100) NOT NULL,
-  `1description` varchar(100) NOT NULL,
-  `2description` varchar(100) NOT NULL,
-  `3description` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `premium_package`
---
-
-CREATE TABLE `premium_package` (
-  `id` int(11) NOT NULL,
-  `image` mediumblob NOT NULL,
-  `title` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `regular_description`
---
-
-CREATE TABLE `regular_description` (
-  `id` int(11) NOT NULL,
-  `title` varchar(100) NOT NULL,
-  `duracion` varchar(100) NOT NULL,
-  `incluye` varchar(100) NOT NULL,
-  `1description` varchar(100) NOT NULL,
-  `2description` varchar(100) NOT NULL,
-  `3description` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `regular_package`
---
-
-CREATE TABLE `regular_package` (
-  `id` int(11) NOT NULL,
-  `image` mediumblob NOT NULL,
-  `title` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `vehicules`
---
-
-CREATE TABLE `vehicules` (
-  `id` int(11) NOT NULL,
-  `title` varchar(100) NOT NULL,
-  `image` mediumblob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `hero` (`id`, `welcomeText`, `heroDescriptionText`, `heroButtonText`) VALUES
+(1, '¡Bienvenido a Coastall Riders!', 'Somos Coastall Riders\r\nTu aventura costera comienza aquí.', 'Reserva tu aventura ahora');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `company_description`
---
-ALTER TABLE `company_description`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `company_description_unique` (`title`),
-  ADD UNIQUE KEY `company_description_unique_1` (`description`) USING HASH;
-
---
--- Indices de la tabla `economic_description`
---
-ALTER TABLE `economic_description`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `economic_description_unique` (`title`),
-  ADD UNIQUE KEY `economic_description_unique_1` (`duracion`),
-  ADD UNIQUE KEY `economic_description_unique_2` (`incluye`),
-  ADD UNIQUE KEY `economic_description_unique_3` (`1description`),
-  ADD UNIQUE KEY `economic_description_unique_4` (`2description`);
-
---
--- Indices de la tabla `economic_package`
---
-ALTER TABLE `economic_package`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `economicPackage_unique_1` (`title`),
-  ADD UNIQUE KEY `economicPackage_unique` (`image`) USING HASH;
-
---
 -- Indices de la tabla `feedbacks`
 --
 ALTER TABLE `feedbacks`
   ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `footer`
---
-ALTER TABLE `footer`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `header`
---
-ALTER TABLE `header`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `header_logo_unique` (`logo`) USING HASH;
 
 --
 -- Indices de la tabla `hero`
@@ -241,121 +84,20 @@ ALTER TABLE `hero`
   ADD UNIQUE KEY `hero_Btext_unique` (`heroButtonText`);
 
 --
--- Indices de la tabla `premium_description`
---
-ALTER TABLE `premium_description`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `economic_description_unique` (`title`),
-  ADD UNIQUE KEY `economic_description_unique_1` (`duracion`),
-  ADD UNIQUE KEY `economic_description_unique_2` (`incluye`),
-  ADD UNIQUE KEY `economic_description_unique_3` (`1description`),
-  ADD UNIQUE KEY `economic_description_unique_4` (`2description`),
-  ADD UNIQUE KEY `regular_description_unique` (`3description`);
-
---
--- Indices de la tabla `premium_package`
---
-ALTER TABLE `premium_package`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `premiun_package_unique_1` (`title`),
-  ADD UNIQUE KEY `premiun_package_unique` (`image`) USING HASH;
-
---
--- Indices de la tabla `regular_description`
---
-ALTER TABLE `regular_description`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `economic_description_unique` (`title`),
-  ADD UNIQUE KEY `economic_description_unique_1` (`duracion`),
-  ADD UNIQUE KEY `economic_description_unique_2` (`incluye`),
-  ADD UNIQUE KEY `economic_description_unique_3` (`1description`),
-  ADD UNIQUE KEY `economic_description_unique_4` (`2description`),
-  ADD UNIQUE KEY `regular_description_unique` (`3description`);
-
---
--- Indices de la tabla `regular_package`
---
-ALTER TABLE `regular_package`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `regular_package_unique_1` (`title`),
-  ADD UNIQUE KEY `regular_package_unique` (`image`) USING HASH;
-
---
--- Indices de la tabla `vehicules`
---
-ALTER TABLE `vehicules`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `vehicules_unique` (`title`);
-
---
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `company_description`
+-- AUTO_INCREMENT de la tabla `feedbacks`
 --
-ALTER TABLE `company_description`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `economic_description`
---
-ALTER TABLE `economic_description`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `economic_package`
---
-ALTER TABLE `economic_package`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `footer`
---
-ALTER TABLE `footer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `header`
---
-ALTER TABLE `header`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `feedbacks`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `hero`
 --
 ALTER TABLE `hero`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `premium_description`
---
-ALTER TABLE `premium_description`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `premium_package`
---
-ALTER TABLE `premium_package`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `regular_description`
---
-ALTER TABLE `regular_description`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `regular_package`
---
-ALTER TABLE `regular_package`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `vehicules`
---
-ALTER TABLE `vehicules`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
