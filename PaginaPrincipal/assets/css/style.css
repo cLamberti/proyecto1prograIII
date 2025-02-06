@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #F4D8A4;
+  background-color: #FDF4E3;
   height: 100vh;
   margin: 0%;
   font-family: 'Roboto', sans-serif;
@@ -175,13 +175,13 @@ nav a:hover {
 
 .hero {
   min-height: 40vh;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   height: 85vh;
   background-color: #f4f4f4;
   overflow: hidden;
-  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.186);
 }
 
 .hero-content {
@@ -237,7 +237,6 @@ nav a:hover {
 
 @media screen and (max-width: 550px) {
  .hero{
-  width: 95%;
   height: 50vh;
  }
 
@@ -261,7 +260,7 @@ nav a:hover {
   padding: 2rem 1rem;
   display: flex;
   gap: 2rem;
-
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.186);
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -325,9 +324,9 @@ nav a:hover {
 /* Descripción */
 .description {
   width: 100%;
-  background-color: #F4D8A4;
+  background-color: #FDF4E3;
   text-align: center;
-  
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.186);
 }
 
 .description-card {
@@ -335,7 +334,7 @@ nav a:hover {
   min-width: 100%;
   padding: 2rem;
   background: #FDF4E3;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.186);
   margin: 0;
 }
 
@@ -356,6 +355,7 @@ nav a:hover {
 
 /* Descripción de los paquetes */
 .package-description {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.186);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
@@ -450,6 +450,7 @@ nav a:hover {
   background-color: #FDF4E3;
   padding: 2rem;
   text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.186);
 }
 
 .carousel {
@@ -715,11 +716,6 @@ section.comments {
     padding: 0;
   }
 
-  .review-stars {
-    margin: 0;
-    padding: 0;
-    font-size: 0.6rem;
-  }
 }
 
 
