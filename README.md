@@ -17,3 +17,22 @@ Diseño en moqup: https://app.moqups.com/gNQPVqVXPz75e8ixqrSG9LUJkpOR6R6v/view/p
 
 
 ORM: https://github.com/MrNano08/coastallriders-type-orm
+
+Thunder client:
+
+feedback
+
+ {
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPiFrwekd2lvtAPg_pEk4bdSiEZ_BA4xe82g&s",
+    "customer_name": "Valeria Ramírez",
+    "social_media": "@valeramirezweb",
+    "customer_comment": "¡El servicio de Coastall Riders fue excelente. Los vehículos estaban en perfectas condiciones, limpios y muy cómodos para nuestro viaje a las zonas costeras. Además, el proceso de alquiler fue rápido y sencillo, y el personal fue muy amable. Definitivamente los recomendaría y volveré a contratarlos para futuros tours!"
+  }
+
+hero
+
+  {
+    "title": "!Bienvenido a Coastall Riders¡",
+    "text": "El mejor lugar para planear tus vacaciones.",
+    "btnText": "Reserva Ahora Mismo"
+  }
