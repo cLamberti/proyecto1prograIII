@@ -106,3 +106,78 @@ nextButton.addEventListener('click', () => {
 
   moveToSlide(track, currentSlide, nextSlide);
 });
+
+
+
+
+function getHero() {
+  fetch('http://localhost:3000/hero')
+      .then((response) => response.json())
+      .then((hero) => {
+          document.getElementById('hero_Title').innerText = hero[0].title;
+          document.getElementById('hero_text').innerText = hero[0].text;
+          document.getElementById('btnHero').innerText = hero[0].btnText;
+      });
+}
+getHero();
+
+
+function getFeedback() {
+  fetch('http://localhost:3000/feedback')
+      .then(response => response.json())
+      .then(feedbacks => {
+          const reviewsContainer = document.querySelector('.reviews-container');
+          
+          feedbacks.forEach(feedback => {
+              // Crear el contenedor principal del comentario
+              const reviewBoxContainer = document.createElement('div');
+              reviewBoxContainer.classList.add('review-box-container');
+
+              const reviewBox = document.createElement('div');
+              reviewBox.classList.add('review-box');
+
+              // Crear el encabezado del comentario
+              const boxHeader = document.createElement('div');
+              boxHeader.classList.add('box-header');
+
+              // Crear el contenedor de la imagen de perfil
+              const profileImage = document.createElement('div');
+              profileImage.classList.add('profile-image');
+
+              const img = document.createElement('img');
+              img.src = feedback.image_url;
+              img.alt = 'Profile';
+
+              profileImage.appendChild(img);
+
+              // Crear el contenedor de detalles del usuario
+              const userDetails = document.createElement('div');
+              userDetails.classList.add('user-details');
+
+              const strong = document.createElement('strong');
+              strong.innerText = feedback.customer_name;
+
+              const span = document.createElement('span');
+              span.innerText = feedback.social_media;
+
+              userDetails.appendChild(strong);
+              userDetails.appendChild(span);
+
+              // Crear el contenedor del comentario
+              const commentText = document.createElement('p');
+              commentText.innerText = feedback.customer_comment;
+
+              // Estructurar los elementos en el DOM
+              boxHeader.appendChild(profileImage);
+              boxHeader.appendChild(userDetails);
+              reviewBox.appendChild(boxHeader);
+              reviewBox.appendChild(commentText);
+              reviewBoxContainer.appendChild(reviewBox);
+              reviewsContainer.appendChild(reviewBoxContainer);
+          });
+      })
+      .catch(error => console.error('Error al obtener comentarios:', error));
+}
+
+// Llamar a la función para cargar los comentarios
+getFeedback();
