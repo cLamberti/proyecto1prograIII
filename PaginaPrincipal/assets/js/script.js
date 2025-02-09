@@ -6,9 +6,6 @@ const premiumPackageCard = document.getElementById('premium-package-card');
 const menu = document.querySelector("#menu");
 const btnOpenMenu = document.querySelector("#btnOpenMenu");
 const btnCloseMenu = document.querySelector("#btnCloseMenu");
-const title = document.getElementById('heroTitle').value;
-const text = document.getElementById('heroText').value;
-const btnText = document.getElementById('heroBtnText').value;
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -112,10 +109,13 @@ nextButton.addEventListener('click', () => {
 
 
 function updateHero() {
-  if (!title || !text || !btnText) {
-    alert('Por favor, llena todos los campos.');
-    return;
-  }
+  const title = document.getElementById('heroTitle').value;
+  const text = document.getElementById('heroText').value;
+  const btnText = document.getElementById('heroBtnText').value;
+  //if (!title || !text || !btnText) {
+    //alert('Por favor, llena todos los campos.');
+    //return;
+  //}
 
   // Realiza la solicitud fetch
   fetch(`http://localhost:3000/hero/1`, {
