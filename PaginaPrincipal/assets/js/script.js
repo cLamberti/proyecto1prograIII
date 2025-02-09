@@ -25,6 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
 
+      document.getElementById('btnOpenMenu').addEventListener('click', () => {
+        document.getElementById('menu').style.display = 'block';
+      });
+      document.getElementById('btnCloseMenu').addEventListener('click', () => {
+        document.getElementById('menu').style.display = 'none';
+      });
 
       //Menú
       btnOpenMenu.addEventListener("click", () =>{
@@ -130,20 +136,19 @@ function updateHero() {
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error('Error al actualizar el héroe');
+        throw new Error('Error al actualizar el hero');
       }
       return response.json();
     })
     .then((json) => {
-      console.log('Héroe actualizado:', json);
-      alert('Héroe actualizado con éxito');
+      console.log('Hero actualizado:', json);
+      alert('Hero actualizado con éxito');
     })
     .catch((error) => {
       console.error('Error:', error);
-      alert('Ocurrió un error al actualizar el héroe.');
+      alert('Ocurrió un error al actualizar el hero.');
     });
 }
-
 
 function getHero() {
   fetch('http://localhost:3000/hero')
@@ -212,6 +217,122 @@ function getFeedback() {
           });
       })
       .catch(error => console.error('Error al obtener comentarios:', error));
+}
+
+function addFeedback(){
+  const image_url = document.getElementById('addImage').value;
+  const customer_name = document.getElementById('addName').value;
+  const social_media = document.getElementById('addMedia').value;
+  const customer_comment = document.getElementById('addComment').value;
+  if (!image_url|| !customer_name || !social_media || !customer_comment) {
+    alert('Por favor, llena todos los campos.');
+    return;
+  }
+  fetch('http://localhost:3000/feedback/', {
+    method: 'POST',
+    body: JSON.stringify({
+      image_url,
+      customer_name,
+      social_media,
+      customer_comment,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error('Error al agregar el comentario');
+    }
+    return response.json();
+  })
+  .then((json) => {
+    console.log('Comentario agregado:', json);
+    alert('Comentario agregado con éxito');
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+    alert('Ocurrió un error al agregar el comentario.');
+  });
+}
+function deleteFeedback(){
+            const id = document.getElementById('deleteId').value;
+            if (!id) {
+                alert('Por favor ingresa un ID válido');
+                return;
+            }
+            fetch(`http://localhost:3000/feedback/${id}`, {
+                method: 'DELETE',
+            })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Error al eliminar el comentario');
+                }
+                alert('Comentario eliminado con éxito');
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Ocurrió un error al eliminar el comentario.');
+            });
+}
+function loadFeedback() {
+  const id = document.getElementById('updateId').value;
+  if (!id) return;
+
+  fetch(`http://localhost:3000/feedback/${id}`)
+      .then(response => response.json())
+      .then(data => {
+          if (data) {
+              document.getElementById('updateImage').placeholder = data.image_url;
+              document.getElementById('updateName').placeholder = data.customer_name;
+              document.getElementById('updateMedia').placeholder = data.social_media;
+              document.getElementById('updateComment').placeholder = data.customer_comment;
+          } else {
+              alert('Comentario no encontrado.');
+          }
+      })
+      .catch(error => {
+          console.error('Error:', error);
+          alert('Ocurrió un error al cargar el comentario.');
+      });
+}
+function updateFeedback(){
+  const id = document.getElementById('updateId').value;
+  const image_url = document.getElementById('updateImage').value;
+  const customer_name = document.getElementById('updateName').value;
+  const social_media = document.getElementById('updateMedia').value;
+  const customer_comment = document.getElementById('updateComment').value;
+  if (!image_url|| !customer_name || !social_media || !customer_comment) {
+    alert('Por favor, llena todos los campos.');
+    return;
+  }
+
+  fetch(`http://localhost:3000/feedback/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify({
+      image_url,
+      customer_name,
+      social_media,
+      customer_comment,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Error al actualizar el comentario');
+      }
+      return response.json();
+    })
+    .then((json) => {
+      console.log('Comentario actualizado:', json);
+      alert('Comentario actualizado con éxito');
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      alert('Ocurrió un error al actualizar el comentario.');
+    });
 }
 
 // Llamar a la función para cargar los comentarios
