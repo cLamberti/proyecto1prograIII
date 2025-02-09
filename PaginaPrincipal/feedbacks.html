@@ -29,7 +29,7 @@
             </ul>
         </nav>
     </header>
-</main>
+
 
     <!-- Formulario para agregar un comentario -->
     <form id="addForm" class="feedbackForm">
@@ -44,7 +44,7 @@
         <input type="text" id="addMedia" required><br><br>
 
         <label for="addComment">Comentario:</label>
-        <textarea id="addComment" required></textarea><br><br>
+        <textarea id="addComment" maxlength="500" required></textarea><br><br>
 
         <button type="button" onclick="addFeedback()">Agregar Comentario</button>
     </form>
@@ -65,7 +65,7 @@
         <input type="text" id="updateMedia" required><br><br>
 
         <label for="updateComment">Comentario:</label>
-        <textarea id="updateComment" required></textarea><br><br>
+        <textarea id="updateComment" maxlength="500" required></textarea><br><br>
 
         <button type="button" onclick="updateFeedback()">Actualizar Comentario</button>
     </form>
@@ -121,6 +121,9 @@
             <p><a href="#">Términos y Condiciones</a> | <a href="#">Política de Privacidad</a></p>
         </div>
     </footer>
+</main>
+<button id="scrollTopButton" title="Volver al principio">↑</button>
     <script src="assets/js/script.js"></script>
+
 </body>
 </html>
