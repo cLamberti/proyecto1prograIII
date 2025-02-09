@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tours Coastall Riders| Update hero</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tours Coastall Riders| Update feedbacks</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
 <body>
     <header>
         <img class="logo" src="assets/logo.png" alt="Logo">
@@ -25,16 +23,55 @@
             </ul>
         </nav>
     </header>
-    <form class="updateHeroForm">
-        <h2>Título</h2>
-        <input type="text" id="heroTitle" placeholder="Título Hero" required />
-        <h2>Texto</h2>
-        <input type="text" id="heroText" placeholder="Texto" required />
-        <h2>Texto del botón</h2>
-        <input type="text" id="heroBtnText" placeholder="Texto botón" required />
-        <button type="button" onclick="updateHero()">Actualizar Hero</button>
-      </form>
-      <footer class="footer" id="footer">
+    <h1>Formulario de Comentarios</h1>
+
+    <!-- Formulario para agregar un comentario -->
+    <h2>Agregar Comentario</h2>
+    <form id="addForm">
+        <label for="addImage">URL de la imagen:</label>
+        <input type="text" id="addImage" required><br><br>
+
+        <label for="addName">Nombre del cliente:</label>
+        <input type="text" id="addName" required><br><br>
+
+        <label for="addMedia">Redes sociales:</label>
+        <input type="text" id="addMedia" required><br><br>
+
+        <label for="addComment">Comentario:</label>
+        <textarea id="addComment" required></textarea><br><br>
+
+        <button type="button" onclick="addFeedback()">Agregar Comentario</button>
+    </form>
+
+    <!-- Formulario para actualizar un comentario -->
+    <h2>Actualizar Comentario</h2>
+    <form id="updateForm">
+        <label for="updateId">ID del comentario a actualizar:</label>
+        <input type="text" id="updateId" required onchange="loadFeedback()"><br><br>
+
+        <label for="updateImage">URL de la imagen:</label>
+        <input type="text" id="updateImage" required><br><br>
+
+        <label for="updateName">Nombre del cliente:</label>
+        <input type="text" id="updateName" required><br><br>
+
+        <label for="updateMedia">Redes sociales:</label>
+        <input type="text" id="updateMedia" required><br><br>
+
+        <label for="updateComment">Comentario:</label>
+        <textarea id="updateComment" required></textarea><br><br>
+
+        <button type="button" onclick="updateFeedback()">Actualizar Comentario</button>
+
+    <!-- Formulario para eliminar un comentario -->
+    <h2>Eliminar Comentario</h2>
+    <form id="deleteForm">
+        <label for="deleteId">ID del comentario a eliminar:</label>
+        <input type="text" id="deleteId" required><br><br>
+
+        <button type="button" onclick="deleteFeedback()">Eliminar Comentario</button>
+    </form>
+    <footer class="footer" id="footer">
         <div class="footer-container">
             <!-- Información de contacto -->
             <div class="footer-section">
@@ -77,5 +114,6 @@
             <p><a href="#">Términos y Condiciones</a> | <a href="#">Política de Privacidad</a></p>
         </div>
     </footer>
-      <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
+</html>
