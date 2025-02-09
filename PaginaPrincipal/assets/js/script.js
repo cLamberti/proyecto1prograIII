@@ -1,4 +1,3 @@
-
 const scrollTopButton = document.getElementById('scrollTopButton');
 const economicPackageCard = document.getElementById('economic-package-card');
 const regularPackageCard = document.getElementById('regular-package-card');
@@ -27,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       document.getElementById('btnOpenMenu').addEventListener('click', () => {
         document.getElementById('menu').style.display = 'block';
+        console.log("click");
       });
       document.getElementById('btnCloseMenu').addEventListener('click', () => {
         document.getElementById('menu').style.display = 'none';
@@ -221,6 +221,10 @@ function getFeedback() {
       })
       .catch(error => console.error('Error al obtener comentarios:', error));
 }
+
+document.getElementById("btnEditFeedback").addEventListener("click", function() {
+  window.location.href = "feedbacks.html";
+});
 
 function addFeedback(){
   const image_url = document.getElementById('addImage').value;
