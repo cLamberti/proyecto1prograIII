@@ -286,10 +286,10 @@ function loadFeedback() {
       .then(response => response.json())
       .then(data => {
           if (data) {
-              document.getElementById('updateImage').placeholder = data.image_url;
-              document.getElementById('updateName').placeholder = data.customer_name;
-              document.getElementById('updateMedia').placeholder = data.social_media;
-              document.getElementById('updateComment').placeholder = data.customer_comment;
+              document.getElementById('updateImage').value = data.image_url;
+              document.getElementById('updateName').value = data.customer_name;
+              document.getElementById('updateMedia').value = data.social_media;
+              document.getElementById('updateComment').value = data.customer_comment;
           } else {
               alert('Comentario no encontrado.');
           }
