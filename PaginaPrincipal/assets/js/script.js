@@ -112,12 +112,11 @@ function updateHero() {
   const title = document.getElementById('heroTitle').value;
   const text = document.getElementById('heroText').value;
   const btnText = document.getElementById('heroBtnText').value;
-  //if (!title || !text || !btnText) {
-    //alert('Por favor, llena todos los campos.');
-    //return;
-  //}
+  if (!title || !text || !btnText) {
+    alert('Por favor, llena todos los campos.');
+    return;
+  }
 
-  // Realiza la solicitud fetch
   fetch(`http://localhost:3000/hero/1`, {
     method: 'PUT',
     body: JSON.stringify({
