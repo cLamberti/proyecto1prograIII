@@ -6,6 +6,9 @@ const premiumPackageCard = document.getElementById('premium-package-card');
 const menu = document.querySelector("#menu");
 const btnOpenMenu = document.querySelector("#btnOpenMenu");
 const btnCloseMenu = document.querySelector("#btnCloseMenu");
+const title = document.getElementById('heroTitle').value;
+const text = document.getElementById('heroText').value;
+const btnText = document.getElementById('heroBtnText').value;
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -108,6 +111,39 @@ nextButton.addEventListener('click', () => {
 });
 
 
+function updateHero() {
+  if (!title || !text || !btnText) {
+    alert('Por favor, llena todos los campos.');
+    return;
+  }
+
+  // Realiza la solicitud fetch
+  fetch(`http://localhost:3000/hero/1`, {
+    method: 'PUT',
+    body: JSON.stringify({
+      title,
+      text,
+      btnText,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Error al actualizar el héroe');
+      }
+      return response.json();
+    })
+    .then((json) => {
+      console.log('Héroe actualizado:', json);
+      alert('Héroe actualizado con éxito');
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      alert('Ocurrió un error al actualizar el héroe.');
+    });
+}
 
 
 function getHero() {
