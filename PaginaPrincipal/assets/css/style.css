@@ -1,10 +1,14 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #FDF4E3;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0%;
   font-family: 'Roboto', sans-serif;
   
+}
+
+.feedbackBody form[id] {
+  scroll-margin-top: 12rem;
 }
 
 html {
@@ -198,51 +202,6 @@ nav a:hover {
   height: 100%;
 }
 
-.updateHeroForm {
-  width: 50%;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  text-align: center;
-  justify-self: center;
-  background-color: #FFFCF1;
-  padding: 1rem;
-  border-radius: 1rem;
-margin: 1rem;
-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.updateHeroForm input{
-  height: 4rem;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  justify-self: center;
-  background-color: #FFFCF1;
-}
-
-.updateHeroForm button {
-  font-size: 16px;
-  padding: 0.8rem;
-  background-color: #F35E1C;
-  border-radius: 8px;
-  border: none;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.updateHeroForm button:hover {
-  background-color: #f25512;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.updateHeroForm h2{
-  padding: 0;
-  margin: 0;
-}
-
 .hero-text {
   position: absolute;
   top: 50%;
@@ -266,23 +225,6 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 
 .hero-text p {
   font-size: 24px;
-}
-
-.hero-content button {
-  font-size: 16px;
-  padding: 0.8rem;
-  background-color: #F35E1C;
-  border-radius: 8px;
-  border: none;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.hero-content button:hover {
-  background-color: #f25512;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -857,4 +799,92 @@ footer .legal {
   text-align: center;
   margin-top: 20px;
   font-size: 14px;
+}
+
+
+/* Global */
+* button {
+  font-size: 16px;
+  padding: 0.8rem;
+  background-color: #F35E1C;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+* button:hover {
+  background-color: #f25512;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Forms */
+
+.updateHeroForm {
+  width: 50%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  justify-self: center;
+  background-color: #FFFCF1;
+  padding: 1rem;
+  border-radius: 1rem;
+margin: 1rem;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.updateHeroForm input{
+  height: 4rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  justify-self: center;
+  background-color: #FFFCF1;
+}
+
+.updateHeroForm h2{
+  padding: 0;
+  margin: 0;
+}
+
+.feedbackForm {
+  width: 50%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  justify-self: center;
+  background-color: #FFFCF1;
+  padding: 1rem;
+  border-radius: 1rem;
+margin: 1rem;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.feedbackForm input{
+  height: 4rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  justify-self: center;
+  background-color: #FFFCF1;
+}
+
+.feedbackForm textarea  {
+  min-height: 5rem;
+  min-width: 100%;
+  resize: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  justify-self: center;
+  background-color: #FFFCF1;
+}
+
+.feedbackForm h2{
+  padding: 0;
+  margin: 0;
 }

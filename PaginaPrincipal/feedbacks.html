@@ -7,7 +7,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
-<body>
+<body class="feedbackBody">
     <header>
         <img class="logo" src="assets/logo.png" alt="Logo">
         <button class="open-menu" id="btnOpenMenu">    
@@ -18,16 +18,18 @@
             <button class="close-menu" id="btnCloseMenu">x</button>
             <ul class="menu-list">
                 <li><a href="index.html">Inicio</a></li>
+                <li><a href="#addForm">Agregar</a></li>
+                <li><a href="#updateForm">Actualizar</a></li>
+                <li><a href="#deleteForm">Eliminar</a></li>
                 <li><a href="#footer">Contacto</a></li>
                 <li><a href="login.html">Acceder</a></li>
             </ul>
         </nav>
     </header>
-    <h1>Formulario de Comentarios</h1>
 
     <!-- Formulario para agregar un comentario -->
-    <h2>Agregar Comentario</h2>
-    <form id="addForm">
+    <form id="addForm" class="feedbackForm">
+        <h2>Agregar Comentario</h2>
         <label for="addImage">URL de la imagen:</label>
         <input type="text" id="addImage" required><br><br>
 
@@ -44,8 +46,8 @@
     </form>
 
     <!-- Formulario para actualizar un comentario -->
-    <h2>Actualizar Comentario</h2>
-    <form id="updateForm">
+    <form id="updateForm" class="feedbackForm">
+        <h2>Actualizar Comentario</h2>
         <label for="updateId">ID del comentario a actualizar:</label>
         <input type="text" id="updateId" required onchange="loadFeedback()"><br><br>
 
@@ -62,10 +64,11 @@
         <textarea id="updateComment" required></textarea><br><br>
 
         <button type="button" onclick="updateFeedback()">Actualizar Comentario</button>
+    </form>
 
     <!-- Formulario para eliminar un comentario -->
-    <h2>Eliminar Comentario</h2>
-    <form id="deleteForm">
+    <form id="deleteForm" class="feedbackForm">
+        <h2>Eliminar Comentario</h2>
         <label for="deleteId">ID del comentario a eliminar:</label>
         <input type="text" id="deleteId" required><br><br>
 

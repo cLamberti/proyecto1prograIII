@@ -113,6 +113,9 @@ nextButton.addEventListener('click', () => {
   moveToSlide(track, currentSlide, nextSlide);
 });
 
+document.getElementById("btnEditHero").addEventListener("click", function() {
+  window.location.href = "updateHero.html";
+});
 
 function updateHero() {
   const title = document.getElementById('heroTitle').value;
