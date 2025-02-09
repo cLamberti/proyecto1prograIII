@@ -209,6 +209,12 @@ nav a:hover {
   text-align: center;
 }
 
+.btnEditHero{
+  position: absolute;
+  bottom: 5%;
+  right:  2.5%;
+}
+
 .hero-text h1 {
   font-size: 32px;
 }
